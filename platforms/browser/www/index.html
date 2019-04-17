@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body class="content-fluid">
+        <nav class="navbar navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-light.svg" width="90" height="30" class="d-inline-block align-top" alt="">
+                Tickets Mantenimiento
+            </a>
+        </nav>
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8" align="center">
+                <br>
+                <h3>Para levantar un ticket pulsa en la imagen de abajo...</h3>
+                <br>
+                <img src="img/qrBoton.png" width="100%" alt="qrBoton" id="qrBoton">
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+            
+            </div>
+            <div class="col-8" align="center">
+                <form>
+                    <input type="hidden" value="">
+                    <input type="hidden" value="">
+                    <input type="hidden" value="Gerencia">
+                    <input type="hidden" name="guarda" value="guarda">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputFecha4">Fecha Reporte</label>
+                            <input type="text" disabled class="form-control" id="inputFecha4" value="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEquipo4">Equipo</label>
+                            <input type="text" disabled class="form-control" value="" id="inputEquipo4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputFalla4">Descripción de la falla</label>
+                            <textarea class="form-control" id="inputFalla4" required>
+                            </textarea>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputArea4">Area</label>
+                            <input type="text" class="form-control" id="inputArea4" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="checkbox" class="form-comtrol" id="inputVenta">
+                            <label for="inputVenta4">Afecta directamente a la venta</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="border: none;background: #000!important;border-radius: initial;"><b>SUBIR TICKET</b></button>
+                </form>
+            </div>
+            
+            <div class="col-2">
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
